@@ -18,7 +18,9 @@ with open(file_name, 'w', encoding='utf8') as file:
     for key, value in sorted(list_dict.items(), key = lambda item: len(item[1])):
         file.write(key+ '\n')
         file.write("Строк: "+ str(len(value))+ '\n')
-        file.write(str(value)+ '\n')
+        for v in value:
+            file.write(v)
+        file.write('\n\n')
 
 
 
